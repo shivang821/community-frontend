@@ -81,7 +81,7 @@ const Header = () => {
             </div>
           </NavLink>
           <NavLink to='/profile' className='profileIcon'>
-            <Avatar src={user.avatar?user.avatar.url:""} />
+            <Avatar src={user&&user.avatar?user.avatar.url:""} />
           </NavLink>
         </div>
       </div>
