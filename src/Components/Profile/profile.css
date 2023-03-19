@@ -1,0 +1,60 @@
+.profile {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileDiv {
+    height: 30rem;
+    width: 50rem;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 50px 15px #cecece48;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: .5rem;
+}
+
+.upperProfile {
+    height: 7rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileAvatar {
+    height: 7rem;
+    width: 7rem;
+    /* background-color: #f3f2ef; */
+    background-color: #f3f2ef;
+    position: absolute;
+    top: -3.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileAvatar>.MuiAvatar-root {
+    height: 6rem;
+    width: 6rem;
+    box-shadow: 0 0 5px 5px #cecece48;
+}
+
+@media screen and (min-width:426px)and (max-width:1024px) {
+    .profileDiv {
+        height: 60%;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .profileDiv {
+        height: 70%;
+        width: 90%;
+    }
+}
