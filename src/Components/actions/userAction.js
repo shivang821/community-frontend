@@ -3,7 +3,7 @@ import axios from 'axios'
 export const loginUser = (loginData) => async(dispatch) => {
     try {
         dispatch(userLoading());
-        const config = { headers: { "Content-Type": "application/json" } };
+        const config = { headers: { "Content-Type": "application/json" }, withCredentials: true };
         const { data } = await axios.post('/login', loginData, config)
         dispatch(userSuccess(data.user))
     } catch (error) {
@@ -23,7 +23,7 @@ export const loadUser = () => async(dispatch) => {
 export const signup = (userData) => async(dispatch) => {
     try {
         dispatch(userLoading())
-        const config = { headers: { "Content-Type": "application/json" } };
+        const config = { headers: { "Content-Type": "application/json" }, withCredentials: true };
         const { data } = await axios.post('/signup', userData, config)
         dispatch(userSuccess(data.user))
     } catch (error) {
