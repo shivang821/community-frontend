@@ -14,7 +14,7 @@ export const loginUser = (loginData) => async(dispatch) => {
 export const loadUser = () => async(dispatch) => {
     try {
         dispatch(userLoading())
-        const { data } = await axios.get('/me', { withCredentials: true })
+        const { data } = await axios.get('/me')
         console.log(data.user);
         dispatch(userSuccess(data.user))
     } catch (error) {

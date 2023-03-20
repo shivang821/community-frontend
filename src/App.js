@@ -35,6 +35,7 @@ function App() {
     {
       history('/',{replace:true})
     }
+    console.log("isAuthenticate",isAuthenticate);
   },[dispatch,isAuthenticate,history,location])
   return (
     <div className="App">
